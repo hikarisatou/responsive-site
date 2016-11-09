@@ -1,0 +1,415 @@
+@charset "UTF-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* iOS 8+ */
+}
+
+body {
+  font: 1rem/1em "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6,
+address, caption, cite, code,
+dfn, em, strong, th, var {
+  font-style: normal;
+	font-weight: normal;
+}
+
+nav ol, nav ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  background: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:focus {
+  outline: none;
+}
+
+:active,
+:hover {
+  outline-width: 0;
+}
+
+b {
+  font-weight: bold;
+}
+
+dfn	{
+  font-style: normal;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  text-decoration: none;
+}
+
+hr {
+  margin: 1em 0;
+  padding: 0;
+  height: 0;
+  display: block;
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+ins {
+  color: #000;
+  text-decoration: none;
+  background: #ff9;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+small, sub, sup {
+  font-size: 75%;
+}
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  max-width: 100%;
+  width: auto\9; /* for IE8 Bug */
+  height: auto;
+	border: 0;
+	line-hegiht: 0; /* for IE Bug */
+	image-rendering: optimizeQuality; /* quality for moz */
+	-ms-interpolation-mode: bicubic; /* quality for IE */
+}
+
+svg {
+  fill: currentColor;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+legend {
+  max-width: 100%;
+  padding: 0;
+  display: table;
+  color: inherit;
+  white-space: normal;
+  *margin-left: -7px;
+}
+
+button, input, select, textarea, optgroup {
+  font: inherit;
+}
+
+button, input, select, textarea {
+  margin: 0;
+  border: none;
+  color: inherit;
+  vertical-align: baseline;
+  *vertical-align: middle;
+  background: transparent;
+}
+
+button {
+  overflow: visible;
+}
+
+button, input {
+  line-height: normal;
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"], /* WebKit bug in Android 4.0 */
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; /* iOS */
+  *overflow: visible;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: 0;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+input {
+  border-radius: 0;
+}
+
+input, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* IE8/9/10 */
+  *width: 13px;
+  *height: 13px;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  outline-offset: -2px;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+[type=checkbox], [type=radio] {
+  padding: 0;
+}
+
+[type="number"] {
+  width: auto;
+}
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select::-ms-value {
+  color: currentColor;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+input::-ms-clear,input::-ms-reveal,input:focus::-ms-clear,input:focus::-ms-reveal {
+	visibility: hidden;
+	display: none;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+	word-break: break-all;
+}
+
+th, caption {
+	text-align: left;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+iframe, fieldset {
+	border: none;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+p span {
+  white-space: nowrap;
+}
+
+time {
+	display: inline;
+}
+
+li {
+  list-style: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+:after, :before {
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+}
+
+/* --------------------------------------
+   HTML5 ELEMENT.
+---------------------------------------*/
+article, aside, details, figcaption, figure,
+header, footer, hgroup, main, menu, nav, section, summary {
+	display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+}
+
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[hidden], template {
+	display: none;
+}
+
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+[aria-disabled] {
+  cursor: default;
+}
+
+[tabindex], a, area, button, input, label, select, textarea {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+[hidden][aria-hidden=false] {
+  clip: rect(0,0,0,0);
+  display: inherit;
+  position: absolute;
+}
+
+[hidden][aria-hidden="false"]:focus {
+  clip: auto;
+}
+
+::-moz-selection {
+  background-color: #b3d4fc;
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #b3d4fc;
+  color: #000;
+  text-shadow: none;
+}
+
+@media screen {
+  [hidden~="screen"] {
+    display: inherit;
+  }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
